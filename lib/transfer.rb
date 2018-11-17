@@ -16,6 +16,7 @@ class Transfer
     if @status != "complete" && valid?
       @sender.balance -= @transfer_amount
       @receiver.deposit(@transfer_amount)
+      @status = "complete"
     end
   end
 end
