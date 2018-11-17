@@ -12,6 +12,10 @@ class BankAccount
     @balance += amt
   end
 
+  def withdraw(amt)
+    @balance -= amt
+  end
+
   def display_balance
     "Your balance is $#{@balance}."
   end
